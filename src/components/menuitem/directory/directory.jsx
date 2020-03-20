@@ -46,8 +46,8 @@ import './directory.scss'
         return (
             <div className="directory-menu">
                {
-                   this.state.sections.map(({title,imageUrl,id,size}) => (
-                       <MenuItem key={id} Title={title} imageurl={imageUrl} size={size} />
+                   this.state.sections.map(({id,...sections}) => (
+                       <MenuItem key={id} {...sections} />
                    ))
                }
             </div>
