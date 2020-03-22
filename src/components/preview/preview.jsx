@@ -9,8 +9,8 @@ import Collection from '../collection/collection'
             <div className="preview">
 {
     items.filter((item,idx) => idx < 4) 
-    .map(({id,...itemProps}) => (
-        <Collection key={id} {...itemProps} />
+    .map((item) => (
+        <Collection key={item.id} item={item} />
     ))
 }
             </div>
